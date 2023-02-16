@@ -1,44 +1,19 @@
 .main{
     z-index: 2;
     width: 100%;
-    height: calc(100vh - 80px - 1rem);
+    height: calc(100vh - 80px - 1.2rem);
     background-color: $main;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    .container{
-        width: 450px;
-        overflow: hidden;
-        text-align: center;
-    }
-    .container .text{
-        position: relative;
-        color: #fff;
-        font-size: 30px;
-    }
-    .container .text.first-text{
-        color: $header;
-    }
-    .text.sec-text:before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: $main;
-        border-left: 2px solid $header;
-        animation: animate 5s steps(15) infinite;
-    }
-    @keyframes animate{
-        40%, 60%{
-            left: calc(100% + 4px);
-        }
-        100%{
-            left: 0%;
-        }
-    }
+    .console-container {
+        font-size:2rem;
+        text-align:center;
+        height: 50px;
+        width:400px;
+        color:white;
+      }
     .float-avatar{
         width: 200px;
         height: 300px;
@@ -51,10 +26,15 @@
             border: black solid 5px;
             border-radius: 50%;
             animation-name: avatar-animation;
-            animation-duration: 3s;
+            animation-duration: 4s;
             animation-iteration-count: infinite;
-            animation-timing-function: linear;
             position: relative;
+        }
+        .shadow{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
         }
         @keyframes avatar-animation {
             0%{
@@ -62,12 +42,51 @@
                 left: 0;
             }
             50%{
-                bottom: 50px;
+                bottom: 30px;
                 left: 0;
             }
             100%{
                 bottom: 0;
                 left: 0;
+            }
+        }
+        .shadow::before{
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 5%;
+            width: 90%;
+            height: 20px;
+            background: rgba(0,0,0,0.8);
+            border-radius: 50%;
+            z-index: 2;
+            filter: blur(10px);
+            animation-name: shadow-avatar;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes shadow-avatar{
+            0%{
+                bottom: -20px;
+                left: 5%;
+                width: 90%;
+                height: 20px;
+                background: rgba(0,0,0,0.8);
+            }
+            50%{
+                bottom: -20px;
+                left: 10%;
+                width: 80%;
+                height: 20px;
+                background: rgba(0,0,0,0.5);
+            }
+            100%{
+                bottom: -20px;
+                left: 5%;
+                width: 90%;
+                height: 20px;
+                background: rgba(0,0,0,0.8);
             }
         }
     }
