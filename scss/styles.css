@@ -104,6 +104,12 @@ body .header .navbar .nav-link:hover span:nth-child(4) {
 body .header .navbar .nav-item {
   margin: 0px 20px;
 }
+@media (max-width: 991px) {
+  body .header .navbar-nav {
+    height: calc(100vh - 80px - 1.2rem);
+    justify-content: space-evenly;
+  }
+}
 body .main {
   z-index: 2;
   width: 100%;
