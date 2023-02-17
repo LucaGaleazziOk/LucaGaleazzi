@@ -13,6 +13,7 @@
       padding: 0;
       background-color: $header;
       z-index: 4;
+      --bs-navbar-toggler-transition: box-shadow .5s ease-in-out-out;
       #nav-icon-fa{
         color: white;
         font-size: 2rem;

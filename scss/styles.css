@@ -25,6 +25,7 @@ body .header .navbar {
   padding: 0;
   background-color: #1b1b1b;
   z-index: 4;
+  --bs-navbar-toggler-transition: box-shadow .5s ease-in-out-out;
 }
 body .header .navbar #nav-icon-fa {
   color: white;
