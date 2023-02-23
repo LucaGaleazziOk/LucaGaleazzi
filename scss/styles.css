@@ -25,7 +25,6 @@ body .header .navbar {
   padding: 0;
   background-color: #1b1b1b;
   z-index: 4;
-  --bs-navbar-toggler-transition: box-shadow .5s ease-in-out-out;
 }
 body .header .navbar #nav-icon-fa {
   color: white;
@@ -214,6 +213,191 @@ body .main .float-avatar .shadow::before {
     width: 90%;
     height: 20px;
     background: rgba(0, 0, 0, 0.8);
+  }
+}
+@media (max-width: 992px) {
+  body .main .float-avatar {
+    width: 150px;
+    height: 250px;
+    display: flex;
+    align-items: end;
+    margin-bottom: 0px;
+    z-index: 1 !important;
+  }
+  body .main .float-avatar .avatar {
+    width: 150px;
+    border: black solid 3px;
+    border-radius: 50%;
+    animation-name: avatar-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    position: relative;
+  }
+  body .main .float-avatar .shadow {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  @keyframes avatar-animation {
+    0% {
+      bottom: 0;
+      left: 0;
+    }
+    50% {
+      bottom: 30px;
+      left: 0;
+    }
+    100% {
+      bottom: 0;
+      left: 0;
+    }
+  }
+  body .main .float-avatar .shadow::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 5%;
+    width: 90%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    z-index: 2;
+    filter: blur(10px);
+    animation-name: shadow-avatar;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes shadow-avatar {
+    0% {
+      bottom: -20px;
+      left: 5%;
+      width: 90%;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+    50% {
+      bottom: -20px;
+      left: 10%;
+      width: 80%;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    100% {
+      bottom: -20px;
+      left: 5%;
+      width: 90%;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+body .about-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+body .about-me .about-me-text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .about-me .about-me-text .text-box {
+  width: 500px;
+  height: -moz-max-content;
+  height: max-content;
+}
+body .about-me .about-me-text .text-box .about-me-description {
+  font-size: 1.5rem;
+  text-align: justify;
+  margin: 0px 0px 50px;
+}
+body .about-me .about-me-text .github-refference {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body .about-me .about-me-text .github-refference .github-text {
+  font-size: 1.5rem;
+  margin: 0px 20px 0px 0px;
+}
+body .about-me .about-me-text .github-refference .github-img .github-link .fa-brands.fa-github::before {
+  font-size: 2rem;
+}
+body .about-me .about-me-avatar {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+body .about-me .about-me-avatar .fullbody-avatar {
+  width: 250px;
+  position: relative;
+  animation-name: deslizar;
+  animation-duration: 3s;
+}
+@keyframes deslizar {
+  0% {
+    right: -500px;
+  }
+  100% {
+    right: 0;
+  }
+}
+body .about-me .am-avatar {
+  display: none;
+}
+@media (max-width: 992px) {
+  body .about-me {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body .about-me .about-me-text {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body .about-me .about-me-text .text-box {
+    width: 80%;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  body .about-me .about-me-text .text-box .about-me-description {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin: 0px 0px 20px;
+  }
+  body .about-me .about-me-text .github-refference {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  body .about-me .about-me-text .github-refference .github-text {
+    font-size: 1.2rem;
+    margin: 0px 10px 0px 0px;
+  }
+  body .about-me .about-me-text .github-refference .github-img .github-link .fa-brands.fa-github::before {
+    font-size: 1rem;
+  }
+  body .about-me .about-me-avatar {
+    display: none;
+  }
+  body .about-me .am-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 body .footer {
