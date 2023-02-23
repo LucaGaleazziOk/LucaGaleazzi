@@ -368,6 +368,7 @@ body .about-me .am-avatar {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: auto;
   }
   body .about-me .about-me-text .text-box {
     width: 80%;
@@ -398,6 +399,177 @@ body .about-me .am-avatar {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+body .portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+body .portfolio .beketo, body .portfolio .creador-contrasenas {
+  width: 50%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+body .portfolio .beketo .img-beketo {
+  width: 500px;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 10px;
+  border: 2px solid black;
+  overflow: hidden;
+  margin: 0px 25px;
+  position: relative;
+  animation-name: aparecer;
+  animation-duration: 3s;
+}
+body .portfolio .beketo .img-beketo .minatura {
+  width: 100%;
+}
+body .portfolio .beketo .text-beketo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+}
+body .portfolio .beketo .text-beketo .titulo {
+  text-align: center;
+  font-size: 1.5rem;
+}
+body .portfolio .beketo .text-beketo .description {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+body .portfolio .creador-contrasenas .img-creador {
+  width: 500px;
+  height: -moz-max-content;
+  height: max-content;
+  border-radius: 10px;
+  border: 2px solid black;
+  overflow: hidden;
+  margin: 0px 25px;
+  position: relative;
+  animation-name: aparecer;
+  animation-duration: 3s;
+}
+body .portfolio .creador-contrasenas .img-creador .minatura {
+  width: 100%;
+}
+body .portfolio .creador-contrasenas .text-creador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: -moz-max-content;
+  height: max-content;
+}
+body .portfolio .creador-contrasenas .text-creador .titulo {
+  text-align: center;
+  font-size: 1.5rem;
+}
+body .portfolio .creador-contrasenas .text-creador .description {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+@keyframes aparecer {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@media (max-width: 992px) {
+  body .portfolio .beketo, body .portfolio .creador-contrasenas {
+    width: 100%;
+    height: -moz-max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body .portfolio .beketo .img-beketo {
+    width: 40%;
+    height: -moz-max-content;
+    height: max-content;
+    border-radius: 10px;
+    border: 2px solid black;
+    overflow: hidden;
+    margin: 0px 0px 20px;
+    position: relative;
+    animation-name: aparecer-izq;
+    animation-duration: 3s;
+  }
+  body .portfolio .beketo .img-beketo .minatura {
+    width: 100%;
+  }
+  body .portfolio .beketo .text-beketo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  body .portfolio .beketo .text-beketo .titulo {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  body .portfolio .beketo .text-beketo .description {
+    text-align: justify;
+    font-size: 1rem;
+  }
+  body .portfolio .creador-contrasenas .img-creador {
+    width: 40%;
+    height: -moz-max-content;
+    height: max-content;
+    border-radius: 10px;
+    border: 2px solid black;
+    overflow: hidden;
+    margin: 0px 0px 20px;
+    position: relative;
+    animation-name: aparecer-der;
+    animation-duration: 3s;
+  }
+  body .portfolio .creador-contrasenas .img-creador .minatura {
+    width: 100%;
+  }
+  body .portfolio .creador-contrasenas .text-creador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  body .portfolio .creador-contrasenas .text-creador .titulo {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  body .portfolio .creador-contrasenas .text-creador .description {
+    text-align: justify;
+    font-size: 1rem;
+  }
+  @keyframes aparecer-izq {
+    0% {
+      left: -500px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
+  @keyframes aparecer-der {
+    0% {
+      right: -500px;
+    }
+    100% {
+      right: 0px;
+    }
   }
 }
 body .footer {

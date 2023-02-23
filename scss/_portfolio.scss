@@ -1,0 +1,175 @@
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .beketo, .creador-contrasenas{
+        width: 50%;
+        height: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .beketo{
+        .img-beketo{
+            width: 500px;
+            height:max-content;
+            border-radius: 10px;
+            border: 2px solid black;
+            overflow:hidden;
+            margin: 0px 25px;
+            position: relative;
+            animation-name: aparecer;
+            animation-duration: 3s;
+            .minatura{
+                width: 100%;
+            }
+        }
+        .text-beketo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 900px;
+            .titulo{
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            .description{
+                text-align: justify;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    .creador-contrasenas{
+        .img-creador{
+            width: 500px;
+            height: max-content;
+            border-radius: 10px;
+            border: 2px solid black;
+            overflow: hidden;
+            margin: 0px 25px;
+            position: relative;
+            animation-name: aparecer;
+            animation-duration: 3s;
+            .minatura{
+                width: 100%;
+            }
+        }
+        .text-creador{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 900px;
+            height: max-content;
+            .titulo{
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            .description{
+                text-align: justify;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    @keyframes aparecer {
+        0%{
+            left:-1000px;
+        }
+        100%{
+            left:0px;
+        }
+    }
+}
+@media (max-width:992px) {
+    .portfolio{
+        .beketo, .creador-contrasenas{
+            width: 100%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .beketo{
+            .img-beketo{
+                width: 40%;
+                height:max-content;
+                border-radius: 10px;
+                border: 2px solid black;
+                overflow:hidden;
+                margin: 0px 0px 20px;
+                position: relative;
+                animation-name: aparecer-izq;
+                animation-duration: 3s;
+                .minatura{
+                    width: 100%;
+                }
+            }
+            .text-beketo{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                .titulo{
+                    text-align: center;
+                    font-size: 1.3rem;
+                }
+                .description{
+                    text-align: justify;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .creador-contrasenas{
+            .img-creador{
+                width: 40%;
+                height:max-content;
+                border-radius: 10px;
+                border: 2px solid black;
+                overflow:hidden;
+                margin: 0px 0px 20px;
+                position: relative;
+                animation-name: aparecer-der;
+                animation-duration: 3s;
+                .minatura{
+                    width: 100%;
+                }
+            }
+            .text-creador{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                .titulo{
+                    text-align: center;
+                    font-size: 1.3rem;
+                }
+                .description{
+                    text-align: justify;
+                    font-size: 1rem;
+                }
+            }
+        }
+        @keyframes aparecer-izq {
+            0%{
+                left:-500px;
+            }
+            100%{
+                left:0px;
+            }
+        }
+        @keyframes aparecer-der {
+            0%{
+                right:-500px;
+            }
+            100%{
+                right:0px;
+            }
+        }
+    }
+}
