@@ -3,6 +3,9 @@
     width: 100%;
     height: calc(100vh - 80px - 1.2rem);
     background-color: $main;
+    background: linear-gradient(130deg,rgb(106, 106, 106), $main, $header);
+    background-size: 200% 200%;
+    animation: cambiar 10s ease-in-out infinite;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -180,4 +183,9 @@
             }
         }
     }
+}
+@keyframes cambiar{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
 }
