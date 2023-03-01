@@ -84,6 +84,9 @@
     }
 }
 @media (max-width:992px) {
+    body{
+        max-height: 100vh;
+    }
     .portfolio{
         .beketo, .creador-contrasenas{
             width: 100%;
@@ -95,7 +98,7 @@
         }
         .beketo{
             .img-beketo{
-                width: 40%;
+                width: 200px;
                 height:max-content;
                 border-radius: 10px;
                 border: 2px solid black;
@@ -113,7 +116,9 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: 50%;
+                max-width: 70%;
+                width: max-content;
+                height: max-content;
                 .titulo{
                     text-align: center;
                     font-size: 1.3rem;
@@ -126,7 +131,7 @@
         }
         .creador-contrasenas{
             .img-creador{
-                width: 40%;
+                width: 200px;
                 height:max-content;
                 border-radius: 10px;
                 border: 2px solid black;
@@ -144,7 +149,103 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                width: 50%;
+                max-width: 70%;
+                width: max-content;
+                height: max-content;
+                .titulo{
+                    text-align: center;
+                    font-size: 1.3rem;
+                }
+                .description{
+                    text-align: justify;
+                    font-size: 1rem;
+                }
+            }
+        }
+        @keyframes aparecer-izq {
+            0%{
+                left:-500px;
+            }
+            100%{
+                left:0px;
+            }
+        }
+        @keyframes aparecer-der {
+            0%{
+                right:-500px;
+            }
+            100%{
+                right:0px;
+            }
+        }
+    }
+}
+@media (max-width:412px) {
+    .portfolio{
+        .beketo, .creador-contrasenas{
+            width: 100%;
+            height: max-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .beketo{
+            .img-beketo{
+                width: 150px;
+                height:max-content;
+                border-radius: 10px;
+                border: 2px solid black;
+                overflow:hidden;
+                margin: 0px 0px 20px;
+                position: relative;
+                animation-name: aparecer-izq;
+                animation-duration: 3s;
+                .minatura{
+                    width: 100%;
+                }
+            }
+            .text-beketo{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 70%;
+                width: max-content;
+                height: max-content;
+                .titulo{
+                    text-align: center;
+                    font-size: 1.3rem;
+                }
+                .description{
+                    text-align: justify;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .creador-contrasenas{
+            .img-creador{
+                width: 150px;
+                height:max-content;
+                border-radius: 10px;
+                border: 2px solid black;
+                overflow:hidden;
+                margin: 0px 0px 20px;
+                position: relative;
+                animation-name: aparecer-der;
+                animation-duration: 3s;
+                .minatura{
+                    width: 100%;
+                }
+            }
+            .text-creador{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                max-width: 70%;
+                width: max-content;
+                height: max-content;
                 .titulo{
                     text-align: center;
                     font-size: 1.3rem;

@@ -8,9 +8,11 @@
 body{
     @import "variables";
     overflow: hidden;
+    max-height: 100vh;
     @import "header";
     @import "main";
     @import "aboutme";
     @import "portfolio";
+    @import "contact";
     @import "footer";
 }

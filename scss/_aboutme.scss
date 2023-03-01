@@ -76,7 +76,8 @@
             align-items: center;
             margin: auto;
             .text-box{
-                width: 80%;
+                width: max-content;
+                max-width: 80%;
                 height: max-content;
                 .about-me-description{
                     font-size: 1.2rem;
