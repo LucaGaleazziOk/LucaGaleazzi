@@ -13,6 +13,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -415,7 +416,7 @@ a {
 }
 .contact .form-container {
   background-color: #1b1b1b;
-  width: 50%;
+  width: 80%;
   height: -moz-max-content;
   height: max-content;
   border-radius: 10px;
