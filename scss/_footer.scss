@@ -1,0 +1,12 @@
+.footer{
+    width: 100%;
+    height: max-content;
+    background-color: $footer;
+
+    .footer-text{
+      text-align: center;
+      color: $main;
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
