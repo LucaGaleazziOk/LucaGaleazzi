@@ -17,7 +17,7 @@ html {
 
 body {
   font-size: 16px; /*1rem == 10px*/
-  background-color: #333333;
+  background: linear-gradient(to bottom right, #1b1b1b, #333333, #eee);
   height: -moz-max-content;
   height: max-content;
 }
@@ -185,7 +185,6 @@ a {
 }
 /*Main*/
 .main-container {
-  background-color: #333333;
   display: block;
   width: 100%;
 }
@@ -195,6 +194,8 @@ a {
   border: 0.3rem solid #eee;
   margin: 10rem auto;
   border-radius: 5rem;
+  background-color: #333333;
+  box-shadow: 20px 20px 39px 1px rgba(0, 0, 0, 0.84);
 }
 
 .home {
@@ -479,6 +480,17 @@ a {
   height: 4rem;
   margin: 1rem 0;
   font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .contact .form-container .form #btn {
+    background-color: #109010;
+    border: none;
+    border-radius: 0.5rem;
+    width: 80%;
+    height: 4rem;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+  }
 }
 .contact .form-container .form #btn:hover {
   background-color: #1ee81e;

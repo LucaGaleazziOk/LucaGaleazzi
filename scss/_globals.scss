@@ -9,10 +9,11 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body{
     font-size: 16px; /*1rem == 10px*/
-    background-color: $main;
-    height: max-content
+    background: linear-gradient(to bottom right, $header, $main, $text);
+    height: max-content;
 }
 @import "font";

@@ -1,5 +1,4 @@
 .main-container{
-    background-color: $main;
     display: block;
     width: 100%;
 }
@@ -8,6 +7,10 @@
     border: $border;
     margin: 10rem auto;
     border-radius: 5rem;
+    background-color: $main;
+    -webkit-box-shadow: 20px 20px 39px 1px rgba(0,0,0,0.84);
+-moz-box-shadow: 20px 20px 39px 1px rgba(0,0,0,0.84);
+box-shadow: 20px 20px 39px 1px rgba(0,0,0,0.84);
 }
 .home{
     display: flex;
@@ -270,6 +273,17 @@
                 height: 4rem;
                 margin: 1rem 0;
                 font-size: 2rem;
+            }
+            @media (max-width: 768px){
+                #btn{
+                    background-color: #109010;
+                    border:none;
+                    border-radius: .5rem;
+                    width: 80%;
+                    height: 4rem;
+                    margin: 1rem 0;
+                    font-size: 1.8rem;
+                }
             }
             #btn:hover{
                 background-color: #1ee81e;
